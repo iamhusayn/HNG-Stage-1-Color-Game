@@ -1,7 +1,7 @@
-const colorBox = document.getElementById("colorBox");
-const colorOptionsContainer = document.getElementById("options");
+const questColor = document.getElementById("questColor");
+const options = document.getElementById("options");
 const gameStatus = document.getElementById("gameStatus");
-const scoreDisplay = document.getElementById("score");
+const playerScore = document.getElementById("score");
 const newGameButton = document.getElementById("newGameButton");
 
 let score = 0;
@@ -20,9 +20,9 @@ function startGame() {
   }
 
   targetColor = colors[Math.floor(Math.random() * 6)];
-  colorBox.style.backgroundColor = targetColor;
+  questColor.style.backgroundColor = targetColor;
 
-  colorOptionsContainer.innerHTML = "";
+  options.innerHTML = "";
   gameStatus.textContent = "";
 
   colors.forEach((color) => {
@@ -30,7 +30,7 @@ function startGame() {
     button.style.backgroundColor = color;
     button.setAttribute("data-testid", "options");
     button.addEventListener("click", () => checkAnswer(color));
-    colorOptionsContainer.appendChild(button);
+    options.appendChild(button);
   });
 }
 
@@ -38,7 +38,7 @@ function checkAnswer(selectedColor) {
   if (selectedColor === targetColor) {
     gameStatus.textContent = "You are correct Champ!";
     score++;
-    scoreDisplay.textContent = score;
+    playerScore.textContent = score;
   } else {
     gameStatus.textContent = "You're Wrong! Try Again.";
   }

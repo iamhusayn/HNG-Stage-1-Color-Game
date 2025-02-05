@@ -1,6 +1,5 @@
 body {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif, sans-serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   margin: 0;
   text-align: center;
   font-weight: 600;
@@ -12,9 +11,6 @@ body {
 }
 
 .game-container {
-  /* display: flex; */
-  /* grid-template-columns: repeat(2, 100px); */
-  /* gap: 400px; */
   background-color: #0d1769;
   color: #fff;
   padding: 30px;
@@ -34,7 +30,7 @@ body {
   border-radius: 30px 0px;
 }
 
-#colorBox {
+#questColor {
   width: 150px;
   height: 150px;
   margin: 20px auto;
@@ -52,7 +48,7 @@ body {
 
 button {
   width: 100px;
-  height: 50px;
+  height: 100px;
   border: none;
   border-radius: 4px solid;
   cursor: pointer;
