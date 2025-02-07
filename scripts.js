@@ -1,5 +1,5 @@
-const questColor = document.getElementById("questColor");
-const options = document.getElementById("options");
+const colorBox = document.getElementById("colorBox");
+const colorOption = document.getElementById("colorOption");
 const gameStatus = document.getElementById("gameStatus");
 const playerScore = document.getElementById("score");
 const newGameButton = document.getElementById("newGameButton");
@@ -20,17 +20,17 @@ function startGame() {
   }
 
   targetColor = colors[Math.floor(Math.random() * 6)];
-  questColor.style.backgroundColor = targetColor;
+  colorBox.style.backgroundColor = targetColor;
 
-  options.innerHTML = "";
+  colorOption.innerHTML = "";
   gameStatus.textContent = "";
 
   colors.forEach((color) => {
     const button = document.createElement("button");
     button.style.backgroundColor = color;
-    button.setAttribute("data-testid", "options");
+    button.setAttribute("data-testid", "colorOption");
     button.addEventListener("click", () => checkAnswer(color));
-    options.appendChild(button);
+    colorOption.appendChild(button);
   });
 }
 
